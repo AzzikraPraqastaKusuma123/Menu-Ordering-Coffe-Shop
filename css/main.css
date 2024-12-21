@@ -1,0 +1,319 @@
+.kontainer {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .kartu {
+    width: 100%;
+    max-width: 18rem;
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 20px; 
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .kartu:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .gambar-kartu {
+    width: 100%; 
+    height: auto;
+    object-fit: cover;
+    border-top-left-radius: 8px; 
+    border-top-right-radius: 8px; 
+  }
+  
+  .konten-kartu {
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .judul-kartu {
+    font-size: 1.25rem; 
+    margin-bottom: 0.75rem; 
+    font-weight: bold;
+  }
+  
+  .teks-kartu {
+    color: #666; 
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+  
+  .btn-utama {
+    background-color: #007bff; 
+    color: #fff; 
+    text-decoration: none; 
+    padding: 0.5rem 1rem; 
+    border-radius: 4px;
+    display: inline-block; 
+    margin-top: 10px; 
+    font-size: 0.9rem;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn-utama:hover {
+    background-color: #0056b3; 
+    border: 2px solid #fff;
+    transform: scale(1.05);
+  }
+  
+  .cart-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #007bff;
+    cursor: pointer;
+    z-index: 1000;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .cart-icon:hover {
+    background-color: #e0e0e0;
+  }
+  
+  #cart-dropdown {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    width: 280px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+    overflow: hidden;
+  }
+  
+  #cart-dropdown h3 {
+    font-size: 1.25rem;
+    padding: 10px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border-bottom: 1px solid #ccc;
+    margin: 0;
+    text-align: center;
+  }
+  
+  #cart-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  #cart-items li {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  #cart-items li:last-child {
+    border-bottom: none;
+  }
+  
+  #checkout-form button {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  #checkout-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Styling untuk elemen <main> */
+  main {
+    padding: 20px;
+    background-color: #faf9f8;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsivitas untuk layar kecil */
+  @media (max-width: 768px) {
+    .kontainer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .kartu {
+      width: 90%;
+    }
+  
+    .cart-icon {
+      font-size: 20px;
+    }
+  
+    #cart-dropdown {
+      width: 90%;
+      right: 5%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .btn-utama {
+      font-size: 0.8rem;
+      padding: 0.4rem 0.8rem;
+    }
+  
+    #cart-dropdown h3 {
+      font-size: 1rem;
+    }
+  
+    #cart-items li {
+      font-size: 0.8rem;
+    }
+  
+    #checkout-form button {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Tambahkan untuk input */
+  input[type="text"], input[type="number"] {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+  }
+  
+  input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #007bff;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  input[type="submit"], button {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ff5353;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  input[type="submit"]:hover, button:hover {
+    background-color: #218838;
+  }
+
+  /* Warna Latar Belakang Utama */
+body {
+    background-color: #FAF9F6;
+    font-family: 'Arial', sans-serif;
+    color: #333333;
+}
+
+/* Warna Heading */
+h1, h3, h5 {
+    color: #FF6F61;
+}
+
+/* Warna Kartu */
+.kartu {
+    background-color: #FFFFFF;
+    border: 1px solid #FF6F61;
+    color: #333333;
+}
+
+/* Tombol Utama */
+.btn-utama {
+    background-color: #FF6F61;
+    border: none;
+    color: #FFFFFF;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-utama:hover {
+    background-color: #E95A50;
+    transform: translateY(-3px);
+}
+
+/* Harga Produk */
+.teks-kartu {
+    color: #FFC107;
+    font-weight: bold;
+}
+
+/* Keranjang Belanja */
+.cart-icon {
+    background-color: #4CAF50;
+    color: #FFFFFF;
+    border: 1px solid #4CAF50;
+}
+
+.cart-icon:hover {
+    background-color: #43A047;
+}
+
+/* Warna Form Input */
+input[type="text"], input[type="number"] {
+    background-color: #FFF9F0;
+    border: 1px solid #FF6F61;
+    border-radius: 4px;
+    color: #333333;
+    padding: 10px;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #FF6F61;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 111, 97, 0.5);
+}
+
+/* Tombol Checkout */
+#checkout-form button {
+    background-color: #FF6F61;
+    border: none;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#checkout-form button:hover {
+    background-color: #E95A50;
+}

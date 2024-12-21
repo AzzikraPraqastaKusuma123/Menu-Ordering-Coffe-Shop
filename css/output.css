@@ -1,0 +1,250 @@
+/* Gaya Dasar Halaman */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #FFEFBA, #FFFFFF);
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Wrapper Utama */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #E0E0E0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Judul Halaman */
+h1 {
+    font-size: 2.5rem;
+    color: #FF6F61;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #333333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #FF6F61;
+    padding-bottom: 8px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: #FF6F61;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #666666;
+    margin-bottom: 15px;
+}
+
+/* Gaya untuk Total Harga */
+h3.total-harga {
+    font-size: 1.6rem;
+    color: #4CAF50;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Pesan Diskon */
+.pesan-diskon {
+    font-size: 1rem;
+    color: #FF6F61;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Detail Pesanan */
+.detail-pesanan {
+    padding: 20px;
+    background: linear-gradient(to right, #FFFFFF, #F7F7F7);
+    border-radius: 12px;
+    border: 1px solid #E0E0E0;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease;
+}
+
+.detail-pesanan h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Kotak Pesanan */
+.kotak-pesanan {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.kotak-item {
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    border: 1px solid #E0E0E0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kotak-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.kotak-item h3 {
+    font-size: 1.2rem;
+    color: #555555;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.kotak-item p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #555555;
+}
+
+/* Animasi FadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tombol Kembali */
+.button-back {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto;
+    padding: 10px 15px;
+    background-color: #FF6F61;
+    color: #FFFFFF;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-back:hover {
+    background-color: #E65B50;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    main {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    .detail-pesanan {
+        padding: 15px;
+    }
+
+    .detail-pesanan p {
+        font-size: 0.9rem;
+    }
+
+    .detail-pesanan h3 {
+        font-size: 1rem;
+    }
+
+    .kotak-item {
+        padding: 15px;
+    }
+
+    .kotak-item p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .detail-pesanan {
+        padding: 10px;
+    }
+
+    .detail-pesanan p {
+        font-size: 0.85rem;
+    }
+
+    .detail-pesanan h3 {
+        font-size: 0.95rem;
+    }
+
+    .kotak-item {
+        padding: 10px;
+    }
+
+    .kotak-item p {
+        font-size: 0.85rem;
+    }
+}
